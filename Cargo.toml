@@ -88,28 +88,28 @@ taffy_test_helpers = { path = "tests/common"}
 # Enable default features for tests and examples
 taffy = { path = "." }
 
-[profile.release]
-lto = true
-panic = 'abort'
-
-[[bench]]
-name = "dummy_benchmark"
-path = "benches/dummy_benchmark.rs"
-harness = false
-
-[[example]]
-name = "basic"
-# This causes all the examples to be scraped for documentation, not just the basic example
-doc-scrape-examples = true
-
-[workspace]
-members = [
-    "scripts/gentest",
-    "scripts/format-fixtures",
-    "scripts/import-yoga-tests",
-    "benches",
-    "tests/common",
-]
-# The cosmic_text example is excluded from the workspace as including it breaks compilation
-# of all crates in the workspace with our MSRV compiler
-exclude = ["examples/cosmic_text"]
+# [profile.release]
+# lto = true
+# panic = 'abort'
+# 
+# [[bench]]
+# name = "dummy_benchmark"
+# path = "benches/dummy_benchmark.rs"
+# harness = false
+# 
+# [[example]]
+# name = "basic"
+# # This causes all the examples to be scraped for documentation, not just the basic example
+# doc-scrape-examples = true
+# 
+# [workspace]
+# members = [
+#     "scripts/gentest",
+#     "scripts/format-fixtures",
+#     "scripts/import-yoga-tests",
+#     "benches",
+#     "tests/common",
+# ]
+# # The cosmic_text example is excluded from the workspace as including it breaks compilation
+# # of all crates in the workspace with our MSRV compiler
+# exclude = ["examples/cosmic_text"]
